@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  employeeportal:
+    build: ./EmployeePortal
+    ports:
+      - "8080:80"
+    container_name: employeeportal
+
+  employeeservice:
+    build: ./EmployeeService
+    ports:
+      - "8081:80"
+    container_name: employeeservice
+
+  leaveservice:
+    build: ./LeaveService
+    ports:
+      - "8082:80"
+    container_name: leaveservice

@@ -1,0 +1,19 @@
+@model EmployeePortal.Models.UserModel
+@{
+    Layout = null;
+}
+<html>
+<body>
+    <h2>Login</h2>
+    @using (Html.BeginForm()) {
+        <label>Username</label>
+        @Html.TextBoxFor(m => m.Username)
+        <br/>
+        <label>Password</label>
+        @Html.PasswordFor(m => m.Password)
+        <br/>
+        <input type="submit" value="Login" />
+    }
+    <div>@ViewBag.Error</div>
+</body>
+</html>
